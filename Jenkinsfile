@@ -8,6 +8,7 @@ stages {
   stage('Build') {
     steps {
        bat 'mvn -B -q package'
+      //para linux sh
     }
 }
 }
