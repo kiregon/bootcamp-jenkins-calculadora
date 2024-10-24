@@ -6,7 +6,7 @@ maven "maven 3.9.9"
 }
 stages {
   stage('Build') {
-    setps {
+    steps {
        sh 'mvn -B -q package'
     }
 }
