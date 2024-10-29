@@ -1,6 +1,7 @@
 pipeline {
-   agent any
-
+   //agent any
+   agent { label 'jdk21' }
+   
    tools {
       maven "maven 3.9.9"
    }
