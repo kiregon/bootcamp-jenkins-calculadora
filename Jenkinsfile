@@ -1,15 +1,19 @@
 pipeline {
-agent any
+   agent any
 
-tools {
-maven "maven 3.9.9"
-}
-stages {
-  stage('Build') {
-    steps {
-       bat 'mvn -B -q package'
-      //para linux sh
-    }
-}
-}
+   tools {
+      maven "maven 3.9.9"
+   }
+   stages {
+      stage('Build') {
+         steps {
+            bat 'mvn -B -q package'
+            //para linux sh
+         }
+         post {
+           always {
+             junit 'target/surefire-reports/*.xml'
+           }
+      }
+   }
 }
