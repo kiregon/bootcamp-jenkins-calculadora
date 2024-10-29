@@ -5,7 +5,16 @@ pipeline {
    tools {
       maven "maven 3.9.9"
    }
+   parameters {
+      string(name: 'ENTRADA', defaultValue:'hola', description:'Parametro requerido')
+   }
+   
    stages {
+      stage ('ejemplo') {
+        steps {
+          echo params.ENTRADA
+        }
+      }
       stage('Build') {
          steps {
             bat 'mvn -B -q package'
