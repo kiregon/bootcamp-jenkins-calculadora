@@ -6,7 +6,7 @@ pipeline {
       maven "maven 3.9.9"
    }
    parameters {
-      password(name: 'PASSWORD', defaultValue:'hola', description:'Parametro requerido')
+      password(name: 'PASSWORD', defaultValue:'', description:'Parametro requerido')
    }
    
    stages {
