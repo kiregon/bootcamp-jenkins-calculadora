@@ -27,4 +27,27 @@ pipeline {
          }
       }
    }
+
+/*post {
+    failure {
+      echo "Cuando falla"
+    }
+    success {
+      echo "Se ejecuto con exito"
+    }
+    aborted {
+      echo "El job se aborto"
+    }
+    changed {
+      echo "Cambió"
+    }
+    fixed {
+      echo "Arreglado"
+    }
+    always {
+      echo "Siempre se ejecuta"
+    }
+  }*/
+
+   
 }
